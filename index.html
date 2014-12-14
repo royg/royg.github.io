@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Building out my interactive Resume</title>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <!-- script src='http://google-maps-utility-library-v3.googlecode.com/svn/trunk/richmarker/src/richmarker-compiled.js' type='text/javascript'></script -->
+
+</head>
+<body>
+<div class="container">
+    <div class="row"  id="contact-header">
+        <div class="col-md-12">
+            <div class="contact-list text-right" id="contact-list"></div>
+        </div>
+    </div>
+    <div class="row"  id="header">
+        <!-- div class="col-md-12 text-left" take up the whole section-->
+        <div class="row">
+                <div class="col-md-2 col-xs-4">
+                    <div class= "row" id="biopic"></div>
+                    <div clss="row" id="current-address"></div>
+                </div>
+                <div class="col-md-10 col-xs-8">
+                    <div class="row title" id="indie_name"></div>
+                    <div class="row skill-list" id="skillschart"></div>
+                </div>
+        </div>
+
+        <div class="row ">
+           <div class="col-md-12 col-xs-12 tabs">
+                <ul class="row cv-tabs">
+                    <li class="col-md-3 col-xs-3 about" id="about-section"><a class="col-md-12 col-xs-12 " href="#" id="about">About me</a></li>
+                    <li class="col-md-3 col-xs-3 work" id="work-section"><a class="col-md-12 col-xs-12 "  href="#" id="work">Work Experience</a></li>
+                    <li class="col-md-3 col-xs-3 education" id="education-section" ><a class="col-md-12 col-xs-12"  href="#" id="education">Education</a></li>
+                    <li class="col-md-3 col-xs-3 my-world active" id="my-world-section"><a class="col-md-12 col-xs-12 " id="my-world" href="#">My World</a></li>
+                </ul>
+            </div>
+
+            <div class="row tabs tab-content" id="tab-content">
+                <!-- Basic Description of the person -->
+                <div class="about" id="aboutme"></div>
+                <!-- Education History -->
+                <div class="education col-md-12">
+                    <dl class="education-history" id="education-history">
+                    </dl>
+                </div>
+                <!-- work History -->
+                <div class="work">
+                    <dl class="work-experience " id="work-experience">
+                    </dl>
+                </div>
+                <!-- add the google maps class with locations -->
+                <div class="my-world col-md-12 active" id="map">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row"  id="bottom-row">
+        <h6></h6>
+    </div>
+
+    <script src="js/bio_data_json.js"></script>
+    <script src="js/bio_data.js"></script>
+    <script src="js/resumebuilder.js"></script>
+
+</div>
+
+
+</body>
+</html>
